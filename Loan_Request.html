@@ -3,21 +3,57 @@
   <head>
     <meta charset="utf-8">
     <title>Loan Request</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Loan_Request.css">
   </head>
+
   <body>
 
     <h1>Loan Request</h1>
 
-    <form class="" action="index.html">
+    <form class="loanForm" id="loanRequestForm" action="index.html">
 
-      <input type="text" id="fname" class="fname" placeholder="First Name" required> <br>
-      <input type="text" id="lname" class="lname" placeholder="Last Name" required> <br>
-      <input type="number" id="qnt" class="qnt" placeholder="Quantity" required>
-        <p class="maxQuantity">Max quantity: RD$50M</p>
-      <input type="text" id="prefix" class="phn" placeholder="Prefix" required> <br>
+      <!--FORM DIV GROUP #1-->
+      <div id="formBlock1" class="block1">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" class="fname" required> <br>
 
-      <input type="button" class="btn" id="sendBtn" value="Send">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" class="lname" required> <br>
+
+        <label for="accNumber">Account Number</label>
+        <input type="text" id="accNumber" class="accountnum" title="10 Digits" required> <br>
+
+        <label for="regionSelector">Region</label>
+        <select id="regionSelector" class="regionSelection" required>
+          <option value="local">Dominican Republic</option>
+          <option value="central">Central America</option>
+        </select>
+      </div>
+
+      <!--FORM DIV GROUP #2-->
+      <div id="formBlock2" class="block2">
+        <label for="currencySelector">Currency</label>
+        <select id="currencySelector" class="currencySelection" required>
+          <option value="DOP">DOP</option>
+          <option value="USD">USD</option>
+        </select> <br>
+
+        <label for="qnt">Quantity</label>
+        <input type="number" id="qnt" class="qnt" required> <br>
+
+        <label for="rate">Interest Rate</label>
+        <input type="number" id="rate" class="intRate" required> <br>
+
+        <label for="prefix">Phone Prefix</label>
+        <input type="text" id="prefix" class="phn" required>
+      </div>
+
+      <!--MESSAGE TAG-->
+      <p id="msg"></p>
+
+      <!--BUTTON-->
+      <input type="button" class="btn" id="sendBtn" value="Send Request">
 
     </form>
 

@@ -1,0 +1,84 @@
+/*
+  FOREST GREEN -> rgb(34, 139, 34);
+  LIME GREEN ->  rgb(45, 196, 45);
+  LIME ->  rgb(167, 245, 65);
+  WHITE ->  rgb(255, 255, 255);
+  BLACK ->  rgb(0, 0, 0);
+*/
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Manrope', sans-serif;
+    background-color: rgb(167, 245, 65);
+    background-size: 100vw, 100vh;
+    background-attachment: fixed;
+    letter-spacing: -0.25px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  h1 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 40px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    background-color: rgb(45, 196, 45);
+    text-align: center;
+    margin-left: 205px;
+    margin-right: 205px;
+    border-radius: 5px;
+  }
+  
+  div {
+
+  }
+  
+  label {
+    font-weight: lighter;
+    color: rgb(255, 255, 255);
+  }
+  
+  input {
+    border: none;
+    font-size: 20px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 7.5px;
+    margin: 7.5px;
+  }
+
+  input.loanAmountField {
+    margin-top: 30px;
+    width: 16%;
+  }
+
+  input.loanRateField {
+    width: 10%;
+  }
+
+  input.loanTimeField {
+    width: 10%;
+  }
+  
+  input.calbtn {
+    border: none;
+    text-align: center;
+    background-color: rgb(34, 139, 34);
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    width: 30%;
+    cursor: pointer;
+  }

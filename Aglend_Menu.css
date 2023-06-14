@@ -1,6 +1,7 @@
 /*
   FOREST GREEN -> rgb(34, 139, 34);
   LIME GREEN ->  rgb(50, 205, 50);
+  LIME ->  rgb(167, 245, 65);
   WHITE ->  rgb(250, 250, 250);
   BLACK ->  rgb(0, 0, 0);
 */
@@ -60,7 +61,6 @@
     li:hover {
       color: green;
       background-color: white;
-
     }
 
     a {
@@ -73,14 +73,14 @@
 
     /* FORM STYLE */
     div {
-      background-color: green;
+      background-color: rgb(34, 139, 34);
       color: rgb(250, 250, 250);
       padding: 50px;
       width: auto;
     }
 
     div.block2, div.block4 {
-      background-color: white;
+      background-color: rgb(167, 245, 65);
       color: rgb(0, 0, 0);
       padding: 50px;
     }

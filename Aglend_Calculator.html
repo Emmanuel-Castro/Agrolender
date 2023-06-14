@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Loan Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Aglend_Calculator.css">
+  </head>
+
+  <body>
+
+    <h1>Loan Calculator</h1>
+
+    <form class="calculatorForm" id="loanCalculatorForm" action="index.html">
+
+    <!--DIV INPUT BLOCK-->  
+    <div>
+      <label for="loanAmount">Loan Amount</label>
+      <input type="text" class="loanAmountField" id="loanAmount" required> <br>
+
+      <label for="loanRate">Interest Rate</label>
+      <input type="text" class="loanRateField" id="loanRate" required> <br>
+
+      <label for="loanTime">Time in Months</label>
+      <input type="text" class="loanTimeField" id="loanTime" required> <br>
+    </div>
+
+    <!--BUTTON-->
+    <input type="button" class="calbtn" id="calculationBtn" value="Calculate">
+    
+    </form>
+   
+  </body>

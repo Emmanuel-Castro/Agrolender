@@ -1,44 +1,65 @@
 let first = document.getElementById('fname');
 let last = document.getElementById('lname');
+let account = document.getElementById('accNumber');
+let region = document.getElementById('regionSelector');
+let currency = document.getElementById('currencySelector');
 let quantity = document.getElementById('qnt');
+let rate = document.getElementById('rate');
 let prefix = document.getElementById('prefix');
 
 
-document.getElementById('sendBtn').addEventListener("click", function() {
+//Set the network connection status
+if (window.navigator.onLine == true) {
+  console.log('Status: Online');
+} else {
+  console.log('Status: Offline');
+}
 
-  if (first.value == '' && last.value == '' && quantity.value == '' && prefix.value == '') {
-    window.alert('Complete all the inputs');
-  } else if (first.value == '' || last.value == '') {
-    window.alert('First Name and Last Name inputs are mandatory');
-  } else if (quantity.value == '') {
-    window.alert('Quantity input is mandatory');
-  } else if (prefix.value == '') {
-    window.alert('Phone Prefix input is mandatory');
-  } else if (quantity.value < 10000) {
-    window.alert('Minimum Quantity: RD$10,000');
-  } else if (quantity.value > 50000000) {
-    window.alert('Maximum Quantity: RD$50,000,000')
-  } else if (prefix.value != '809') {
-    window.alert('Phone Prefix not available in your country');
-  } else {
-    window.alert('Request Completed');
-
-    console.log(`First Name: ${typeof first.value}`);
-    console.log(`Last Name: ${typeof last.value}`);
-    console.log(`Quantity: RD$${typeof quantity.value}`);
-    console.log(`Phone Prefix: ${typeof prefix.value}`);
-  }
-
-});
-
-
-  if (window.navigator.language == 'es-419') {
-    console.log('Region: Central America and the Caribbean');
-  }
-
-console.log(`App Version: ${window.navigator.appVersion}`);
-console.log(`Platform: ${window.navigator.platform}`);
-console.log(`Language: ${window.navigator.language}`);
-console.log(`Online Status: ${window.navigator.onLine}`);
+//Set the file protocol
 console.log(`Protocol: ${window.location.protocol}`);
-console.log(`Route: ${window.location.pathname}`);
+
+//Set the geographical zone
+if (window.navigator.language == 'es-419') {
+  console.log('Region: Central America and the Caribbean');
+}
+
+//Button Listener
+document.getElementById('sendBtn').addEventListener("click", function() {
+  
+  if (first.value == '') {
+    document.getElementById('msg').innerHTML = 'First Empty';
+  } else if (last.value == '') {
+    document.getElementById('msg').innerHTML = 'Last Empty';
+  } else if (account.value == '') {
+    document.getElementById('msg').innerHTML = 'Account Empty';
+  } else if (account.value.length != 10) {
+    document.getElementById('msg').innerHTML = 'Account Number must have 10 digits';  
+  } else if (quantity.value == '') {
+    document.getElementById('msg').innerHTML = 'Quantity Empty';
+  } else if (quantity.value < 10000) {
+    document.getElementById('msg').innerHTML = 'Minimum Quantity: RD$10,000';
+  } else if (quantity.value > 50000000) {
+    document.getElementById('msg').innerHTML = 'Maximum Quantity: RD$50,000,000';
+  } else if (rate.value == '') {
+    document.getElementById('msg').innerHTML = 'Rate Empty';
+  } else if (prefix.value == '') {
+    document.getElementById('msg').innerHTML = 'Prefix Empty';
+  } else if (prefix.value != '809') {
+    document.getElementById('msg').innerHTML = 'Phone Prefix not available in your country';
+  } else {
+    window.alert('Request Sended');
+    document.getElementById('msg').innerHTML = '';
+    document.getElementById('loanRequestForm').reset();
+
+    console.log(`First Name: ${first.value}`);
+    console.log(`Last Name: ${last.value}`);
+    console.log(`Account Number: ${Number.parseInt(account.value)}`);
+    console.log(`Region: ${region.value}`);
+
+    console.log(`Currency: ${currency.value}`);
+    console.log(`Quantity: RD$ ${quantity.value}`);
+    console.log(`Interest Rate: ${rate.value}`);
+    console.log(`Phone Prefix: ${prefix.value}`);
+  }
+    
+});
