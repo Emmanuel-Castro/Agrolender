@@ -1,7 +1,12 @@
-let os = require('os');
+let http = require('http');
 
-if (os.platform() != 'win32') {
-    console.log('Incomplete Authentication');
-} else {
-  console.log(`Operating System Authenticated: ${os.platform()}`);
-}
+const server = http.createServer((req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Welcome');
+});
+
+const port = 3000;
+
+server.listen(port, () => {
+  console.log('Server Working')
+});
