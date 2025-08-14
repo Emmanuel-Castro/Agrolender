@@ -1,29 +1,29 @@
-let first = document.getElementById('fname');
-let last = document.getElementById('lname');
-let account = document.getElementById('accNumber');
-let region = document.getElementById('regionSelector');
-let currency = document.getElementById('currencySelector');
-let quantity = document.getElementById('qnt');
-let rate = document.getElementById('rate');
-let prefix = document.getElementById('prefix');
+let firstName = document.getElementById('fname');
+let lastName = document.getElementById('lname');
+let crop = document.getElementById('crop');
+let province = document.getElementById('province');
+let acres = document.getElementById('acres');
+let quantity = document.getElementById('quantity');
 
-
-//Set the network connection status
+ 
+/*Set the network connection status
 if (window.navigator.onLine == true) {
   console.log('Status: Online');
 } else {
   console.log('Status: Offline');
 }
+*/
 
-//Set the file protocol
+/*Set the file protocol
 console.log(`Protocol: ${window.location.protocol}`);
+*/
 
-//Set the geographical zone
+/*Set the geographical zone
 if (window.navigator.language == 'es-419') {
   console.log('Region: Central America and the Caribbean');
-}
+}*/
 
-//Button Listener
+/*Button Listener
 document.getElementById('sendBtn').addEventListener("click", function() {
   
   if (first.value == '') {
@@ -63,3 +63,4 @@ document.getElementById('sendBtn').addEventListener("click", function() {
   }
     
 });
+*/
