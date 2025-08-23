@@ -1,93 +1,98 @@
-/*
+/* 
+  Color Palette
+  
+  FIR GREEN -> rgb(2, 57, 50);
+  PALE SPRING GREEN -> rgb(166, 223, 125);
+  GRASS GREEN -> rgb(51, 193, 82);
+  LIGHT LIME GREEN -> rgb(217, 242, 150);
+
   FOREST GREEN -> rgb(34, 139, 34);
-  LIME GREEN ->  rgb(50, 205, 50);
+  LIME GREEN ->  rgb(45, 196, 45);
   LIME ->  rgb(167, 245, 65);
-  WHITE ->  rgb(250, 250, 250);
+  WHITE ->  rgb(255, 255, 255);
   BLACK ->  rgb(0, 0, 0);
 */
 
-    * {
-      font-family: 'Manrope', sans-serif;
-      margin: 0;
-      padding: 0;
-      letter-spacing: 0.50px;
-    }
 
-    h1.title {
-      margin-top: -55px;
-      font-size: 40px;
-      text-align: center;
-      margin-bottom: 55px;
-    }
+body {
+  background-color: rgb(2, 57, 50);
+  color: rgb(255, 255, 255);
+}
 
-    /* NAVIGATION BAR */
-    input {
-      display: none;
-    }
+p {
+  font-size: 20px;
+}
 
-    label span:hover {
-      cursor: pointer;
-    }
+button {
+  font-size: 20px;
+}
 
-    span {
-      padding-top: 1px;
-      padding-right: 1px;
-      padding-bottom: 1px;
-      padding-left: 5px;
-      font-size: 40px;
-    }
+.navbar-toggler {
+  display: block !important;
+  background: rgb(166, 223, 125);
+}
 
-    nav {
-      position: absolute;
-      width: 20%;
-      margin-left: -25%;
-      transition: all 0.5s;
-    }
+.navbar-toggler-icon {
+  display: block !important;
+}
 
-    nav ul {
-      list-style: none;
-      display: block;
-    }
+.navbar-collapse {
+  display: none !important;
+}
 
-    nav li {
-      color: white;
-      background-color: black;
-      font-weight: bold;
-      padding: 10px;
-      border-bottom: 1px solid rgb(0, 0, 0);
-      text-align: center;
-    }
+.navbar-collapse.show {
+  display: block !important;
+}
 
-    li:hover {
-      color: green;
-      background-color: white;
-    }
 
-    a {
-      text-decoration: none;
-    }
+/* Sections */
 
-    #navbarBtn:checked ~ nav.navbarMenu {
-      margin: 0;
-    }
+#main-section {
+  color: rgb(217, 242, 150);
+}
 
-    /* FORM STYLE */
-    div {
-      background-color: rgb(34, 139, 34);
-      color: rgb(250, 250, 250);
-      padding: 50px;
-      width: auto;
-    }
+#request-section {
+  background-color: rgb(245, 244, 240);
+  color: rgb(2, 57, 50);
+}
 
-    div.block2, div.block4 {
-      background-color: rgb(167, 245, 65);
-      color: rgb(0, 0, 0);
-      padding: 50px;
-    }
+#solutions-section {
+  background-color: rgb(217, 242, 150);
+  color: rgb(2, 57, 50);
+}
 
-    h1 {
-      font-size: 35px;
-      text-align: left;
-      margin-top: 10px;
-      margin-bottom: 35px;
-    }
+#mission-section {
+  background-color: rgb(245, 244, 240);
+  color: rgb(2, 57, 50);
+}
+
+
+/* Buttons */
+
+#request-btn {
+  background-color: rgb(2, 57, 50);
+  color: rgb(245, 244, 240);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#solutions-btn {
+  background-color: rgb(245, 244, 240);
+  color: rgb(2, 57, 50);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#loan-calc-btn, #savings-calc-btn {
+  background-color: rgb(166, 223, 125);
+  color: rgb(2, 57, 50);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#mission-btn {
+  background-color: rgb(2, 57, 50);
+  color: rgb(245, 244, 240);
+  font-size: 18px;
+  font-weight: bold;
+}
