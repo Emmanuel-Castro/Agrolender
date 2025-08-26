@@ -1,4 +1,11 @@
-/*
+/* 
+  Color Palette
+  
+  FIR GREEN -> rgb(2, 57, 50);
+  PALE SPRING GREEN -> rgb(166, 223, 125);
+  GRASS GREEN -> rgb(51, 193, 82);
+  LIGHT LIME GREEN -> rgb(217, 242, 150);
+
   FOREST GREEN -> rgb(34, 139, 34);
   LIME GREEN ->  rgb(45, 196, 45);
   LIME ->  rgb(167, 245, 65);
@@ -12,13 +19,8 @@
 }
 
 body {
-  font-family: 'Manrope', sans-serif;
-  background-color: rgb(167, 245, 65);
-  background-size: 100vw, 100vh;
-  background-attachment: fixed;
-  letter-spacing: -0.25px;
-  padding: 0;
-  margin: 0;
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 
 h1 {
