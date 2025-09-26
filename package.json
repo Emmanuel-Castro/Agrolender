@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Emmanuel-Castro/Agrolender/issues"
   },
-  "homepage": "https://github.com/Emmanuel-Castro/Agrolender#readme"
+  "homepage": "https://github.com/Emmanuel-Castro/Agrolender#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
