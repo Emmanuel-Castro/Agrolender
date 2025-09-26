@@ -1,4 +1,11 @@
-/*
+/* 
+  Color Palette
+  
+  FIR GREEN -> rgb(2, 57, 50);
+  PALE SPRING GREEN -> rgb(166, 223, 125);
+  GRASS GREEN -> rgb(51, 193, 82);
+  LIGHT LIME GREEN -> rgb(217, 242, 150);
+
   FOREST GREEN -> rgb(34, 139, 34);
   LIME GREEN ->  rgb(45, 196, 45);
   LIME ->  rgb(167, 245, 65);
@@ -7,92 +14,27 @@
 */
 
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Manrope', sans-serif;
-  background-color: rgb(167, 245, 65);
-  background-size: 100vw, 100vh;
-  background-attachment: fixed;
-  letter-spacing: -0.25px;
-  padding: 0;
-  margin: 0;
-}
-
-h1 {
-  color: rgb(0, 0, 0);
-  text-align: center;
-  font-size: 40px;
-  margin-top: 5px;
-  margin-bottom: 30px;
-}
-
-form {
-  background-color: rgb(45, 196, 45);
-  text-align: center;
-  margin-left: 100px;
-  margin-right: 100px;
-  border-radius: 5px;
-}
-
-div {
-  display: inline-block;
-  text-align: center;
-  margin: 20px;
+body, #card-body {
+  background-color: rgb(51, 193, 82);
+  color: rgb(2, 57, 50);
 }
 
 label {
-  font-weight: lighter;
-  color: rgb(255, 255, 255);
+  font-weight: bold;
 }
 
-input {
+input, select {
+  font-size: 1.5rem !important;
+}
+
+#sendBtn {
   border: none;
-  font-size: 20px;
-  border-radius: 3px;
-  text-align: center;
-  padding: 7.5px;
-  margin: 7.5px;
-  width: 35%;
-}
-
-input.intRate {
-  width: 15%;
-}
-
-input.phn {
-  width: 20%;
-}
-
-select {
-  border: none;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 4px;
-}
-
-select.regionSelection {
-  font-size: 15.75px;
-  width: 45%;
-}
-
-select.currencySelection {
-  font-size: 15px;
-  width: 20%;
-}
-
-input.btn {
-  border: none;
-  text-align: center;
-  background-color: rgb(34, 139, 34);
+  background-color: rgb(2, 57, 50);
   color: rgb(255, 255, 255);
   font-size: 25px;
-  font-weight: bold;
-  letter-spacing: 0px;
-  margin-top: 30px;
-  border-radius: 4px;
-  width: 30%;
+  font-weight: 500;
+  border-radius: 20px;
+  padding: 10px;
+  width: 24%;
   cursor: pointer;
 }
