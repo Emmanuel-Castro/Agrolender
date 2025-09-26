@@ -1,70 +1,97 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Menu</title>
+    <title>Loan Request</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500&display=swap" rel="stylesheet">
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <link rel="stylesheet" href="loan-request.css">
   </head>
-
+ 
   <body>
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="card border-0">
+            <div class="card-body p-4" id="card-body">
+              
+              <h1 class="mb-4 text-center">Loan Request</h1>
 
-    <h1>Loan Request for Testing</h1>
+              <form id="contactForm">
 
-    <form class="loanForm" id="loanRequestForm" action="index.html">
+                <div class="row g-0 justify-content-center">
+                  
+                  <!-- Left Block -->
+                  <div class="col-md-6">
 
-      <!--FORM DIV GROUP #1-->
-      <div id="formBlock1" class="block1">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" class="fname" required> <br>
+                    <div class="mb-3 text-center">
+                      <label for="fname" class="form-label fs-5">First Name</label>
+                      <input type="text" id="fname" class="form-control mx-auto text-center" style="width:35%" required>
+                    </div>
 
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" class="lname" required> <br>
+                    <div class="mb-3 text-center">
+                      <label for="lname" class="form-label fs-5">Last Name</label>
+                      <input type="text" id="lname" class="form-control mx-auto text-center" style="width:35%" required>
+                    </div>
 
-        <label for="accNumber">Account Number</label>
-        <input type="text" id="accNumber" class="accountnum" title="10 Digits" required> <br>
+                    <div class="mb-3 text-center">
+                      <label for="phone" class="form-label fs-5">Phone</label>
+                      <input type="tel" id="phone" class="form-control mx-auto text-center" style="width:40%" required>
+                    </div>
 
-        <label for="regionSelector">Region</label>
-        <select id="regionSelector" class="regionSelection" required>
-          <option value="local">Dominican Republic</option>
-          <option value="central">Central America</option>
-        </select>
+                  </div>
+
+
+                  <!-- Right Block -->
+                  <div class="col-md-6">
+
+                    <div class="mb-3 text-center">
+
+                      <label for="province" class="form-label fs-5">Province</label>
+                      
+                      <select id="province" class="form-select mx-auto text-center" style="width:46%" required>
+                        <option value="">Select a Province</option>
+                        <option value="santiago">Santiago</option>
+                        <option value="sanjuan">San Juan</option>
+                        <option value="vega">La Vega</option>
+                        <option value="duarte">Duarte</option>
+                        <option value="espaillat">Espaillat</option>
+                      </select>
+
+                    </div>
+
+                    <div class="mb-3 text-center">
+                      <label for="crop" class="form-label fs-5">Crop</label>
+                      <input type="text" id="crop" class="form-control mx-auto text-center" style="width:35%" required>
+                    </div>
+
+                    <div class="mb-3 text-center">
+                      <label for="hectares" class="form-label fs-5">Hectares</label>
+                      <input type="text" id="hectares" class="form-control mx-auto text-center" style="width:25%">
+                    </div>
+
+                  </div>
+
+                </div>
+
+
+                <!-- Button -->
+                <div class="text-center mt-4">
+                  <button type="submit" id="sendBtn">Send Request</button>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
       </div>
-
-      <!--FORM DIV GROUP #2-->
-      <div id="formBlock2" class="block2">
-        <label for="currencySelector">Currency</label>
-        <select id="currencySelector" class="currencySelection" required>
-          <option value="DOP">DOP</option>
-          <option value="USD">USD</option>
-        </select> <br>
-
-        <label for="qnt">Quantity</label>
-        <input type="number" id="qnt" class="qnt" required> <br>
-
-        <label for="rate">Interest Rate</label>
-        <input type="number" id="rate" class="intRate" required> <br>
-
-        <label for="prefix">Phone Prefix</label>
-        <input type="text" id="prefix" class="phn" required>
-      </div>
-
-      <!--MESSAGE TAG-->
-      <p id="msg"></p>
-
-      <!--BUTTON-->
-      <input type="button" class="btn" id="sendBtn" value="Send Request">
-
-    </form>
-
+    </div>
   </body>
-
-  <script type="text/javascript" src="loan-request.js"></script>
 </html>
